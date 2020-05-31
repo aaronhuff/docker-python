@@ -1,5 +1,6 @@
 FROM ubuntu:18.04
 MAINTAINER Aaron Huff <aaron.t.huff@gmail.com>
+ARG DEBIAN_FRONTEND=noninteractive
 
 # set working directory.
 WORKDIR /home
@@ -8,7 +9,7 @@ WORKDIR /home
 RUN apt-get update && apt-get upgrade -y
 
 # install required ubuntu packages.
-RUN apt-get install python3 python3-pip python3-venv git nano -y
+RUN apt-get install -y python3 python3-pip python3-venv git nano
 
 # create folder structure.
 RUN mkdir repositories
