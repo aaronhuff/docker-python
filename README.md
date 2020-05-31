@@ -1,1 +1,1 @@
-# cli-generator-docker
+# docker python development environment
