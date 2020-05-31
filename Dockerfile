@@ -15,3 +15,11 @@ RUN mkdir repositories
 
 # create & activate virtualenv.
 RUN python3 -m venv virtualenv
+ENV VIRTUAL_ENV=/home/virtualenv
+ENV PATH="$VIRTUAL_ENV/bin:$PATH"
+
+# install common python libraries into virtualenv
+RUN pip3 install jinja2 simple-crypt pyyaml
+
+# launch bash shell
+CMD ["/bin/bash"]
