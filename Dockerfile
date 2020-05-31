@@ -5,10 +5,10 @@ MAINTAINER Aaron Huff <aaron.t.huff@gmail.com>
 WORKDIR /home
 
 # update ubuntu.
-RUN apt update && apt upgrade -y
+RUN apt-get update && apt-get upgrade -y
 
 # install required ubuntu packages.
-RUN apt install python3 python3-pip python3-venv git nano
+RUN apt-get install python3 python3-pip python3-venv git nano -y
 
 # create folder structure.
 RUN mkdir repositories
